@@ -1,5 +1,88 @@
-$body-color: blue;
+//@import "compass/css3";
 
-body {
-  color: $body-color;
-}  
+*{
+  box-sizing: border-box;
+}
+
+html,
+body{
+  background-color: red;
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  //overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: -5px;
+  -ms-overflow-style: none;  // IE 10+
+  //overflow: -moz-scrollbars-none;  // Firefox
+}
+
+.parallax__layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  
+  .img-parallax{
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;/*quick fix, I cut one photo too short*/
+    background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(255,0,0,1));
+  }
+}
+
+.parallax__cover{
+  background: red;
+  display: block;
+  position: absolute;
+  width: 100vw;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 1000;
+  color: #fff;
+}
+
+.parallax-cover{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+}
+h1{
+  font-size: 5em;
+  text-align: center;
+  margin-top: 150px;
+}
+p{
+  width: 400px;
+  margin: auto;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0px !important;
+  background: transparent;
+}
+
+$parallax__layers: 3;
+
+@for $i from 0 through $parallax__layers {
+  $x: ($parallax__layers - $i) / 2;
+  .parallax__layer__#{$i}{
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}

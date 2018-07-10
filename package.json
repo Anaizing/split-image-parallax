@@ -18,7 +18,7 @@
     "javascript",
     "webdev"
   ],
-  "author": "webkid.io",
+  "author": "anaizing",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wbkd/yet-another-webpack-es6-starterkit/issues"
@@ -47,6 +47,7 @@
     "babel-loader": "^7.1.4",
     "babel-preset-es2015": "^6.24.1",
     "clean-webpack-plugin": "^0.1.19",
+    "compass-importer": "^0.4.1",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.19.1",
@@ -63,6 +64,7 @@
     "webpack-merge": "^4.1.3"
   },
   "dependencies": {
-    "babel-polyfill": "^6.9.0"
+    "babel-polyfill": "^6.9.0",
+    "compass-sass-mixins": "^0.12.7"
   }
 }
