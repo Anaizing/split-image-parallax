@@ -58,15 +58,27 @@ body{
   list-style: none;
   z-index: 1000;
 }
+.content{
+  display: flex;
+  flex-flow: column;
+  padding: 10px;
+  margin: 5%;
+  z-index: 1001;
+}
 h1{
-  font-size: 5em;
+  font-size: 3em;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 20px;
+  font-family: 'Poiret One';
 }
 p{
-  width: 70%;
   margin: auto;
   text-align: justify;
+  font-family: 'Amatic SC';
+}
+iframe{
+  margin: auto;
+  padding-top: 40px;
 }
 
 ::-webkit-scrollbar {
